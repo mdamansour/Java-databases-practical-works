@@ -6,6 +6,13 @@ public:
     double real;
     double imag;
 
+    // Function to input a complex number
+    void input() {
+        cout << "Enter real and imaginary parts: ";
+        cin >> real >> imag;
+    }
+
+    // Function to display a complex number nicely
     void show() {
         if (real == 0 && imag == 0) {
             cout << "0";
@@ -20,7 +27,7 @@ public:
             cout << real << " + " << imag << "i";
         }
         else {
-            cout << real << " - " << -imag << "i";  // print minus and make imag positive
+            cout << real << " - " << -imag << "i";
         }
     }
 };
@@ -28,11 +35,11 @@ public:
 int main() {
     Complex a, b;
 
-    cout << "Enter first complex number (real imag): ";
-    cin >> a.real >> a.imag;
+    cout << "First complex number:\n";
+    a.input();
 
-    cout << "Enter second complex number (real imag): ";
-    cin >> b.real >> b.imag;
+    cout << "Second complex number:\n";
+    b.input();
 
     cout << "\nA = ";
     a.show();
