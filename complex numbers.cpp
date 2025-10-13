@@ -1,8 +1,18 @@
 #include <iostream>
 using namespace std;
 
+class Complex {
+public:
+    double real;      // real part
+    double imag;      // imaginary part
+};
+
 int main() {
-    double a, b, c, d;
-    cin >> a >> b >> c >> d;          // input: real1 imag1 real2 imag2
-    cout << a + c << " + " << b + d << "i\n";
+    Complex c;           // create one Complex number
+    c.real = 2.0;        // assign values
+    c.imag = 3.0;
+
+    cout << "Real: " << c.real << ", Imaginary: " << c.imag << endl;
+
+    return 0;
 }
